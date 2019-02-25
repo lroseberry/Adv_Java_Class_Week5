@@ -1,0 +1,16 @@
+com\origamisoftware\teach\advanced\services\StockServiceFactory$1.class
+com\origamisoftware\teach\advanced\apps\stockquote\BasicStockQuoteApplication$ProgramTerminationStatusEnum.class
+com\origamisoftware\teach\advanced\services\SimpleStockService.class
+com\origamisoftware\teach\advanced\services\StockServiceFactory.class
+com\origamisoftware\teach\advanced\services\DatabaseStockService.class
+com\origamisoftware\teach\advanced\model\StockQuery.class
+com\origamisoftware\teach\advanced\model\StockData.class
+com\origamisoftware\teach\advanced\services\StockServiceException.class
+com\origamisoftware\teach\advanced\util\IntervalEnums.class
+com\origamisoftware\teach\advanced\util\ProgramConfiguration.class
+com\origamisoftware\teach\advanced\apps\stockquote\BasicStockQuoteApplication.class
+com\origamisoftware\teach\advanced\util\DatabaseUtils.class
+com\origamisoftware\teach\advanced\util\DatabaseInitializationException.class
+com\origamisoftware\teach\advanced\model\StockQuote.class
+com\origamisoftware\teach\advanced\util\DatabaseConnectionException.class
+com\origamisoftware\teach\advanced\services\StockService.class
