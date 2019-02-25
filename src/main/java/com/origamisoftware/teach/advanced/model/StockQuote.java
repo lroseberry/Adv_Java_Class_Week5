@@ -1,11 +1,15 @@
 package com.origamisoftware.teach.advanced.model;
 
+import org.apache.http.annotation.Immutable;
+
 import java.math.BigDecimal;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
  * A container class that contains stock data.
  */
+@Immutable
 public class StockQuote extends StockData {
 
     private BigDecimal price;
@@ -14,8 +18,7 @@ public class StockQuote extends StockData {
 
     /**
      * Create a new instance of a StockQuote.
-     *
-     * @param price  the share price for the given date
+     *  @param price  the share price for the given date
      * @param date   the date of the share price
      * @param symbol the stock symbol.
      */

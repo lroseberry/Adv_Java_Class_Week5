@@ -5,9 +5,15 @@ import com.origamisoftware.teach.advanced.model.StockQuote;
 import com.origamisoftware.teach.advanced.services.StockService;
 import com.origamisoftware.teach.advanced.services.StockServiceException;
 import com.origamisoftware.teach.advanced.services.StockServiceFactory;
+import com.origamisoftware.teach.advanced.util.IntervalEnums;
 
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+
+import static com.origamisoftware.teach.advanced.util.IntervalEnums.*;
 
 /**
  * A simple application that shows the StockService in action.
@@ -79,10 +85,32 @@ public class BasicStockQuoteApplication {
         for (StockQuote stockQuote : stockQuotes) {
             stringBuilder.append(stockQuote.toString());
         }
-
-        return stringBuilder.toString();
+		
+		return stringBuilder.toString();
     }
 
+	/**
+     * Given a <CODE>stockQuery</CODE> get back a the info about the stock to display to th user.
+     *
+     * @param stockQuery the stock to get data for.
+     * @return a String with the stock data in it.
+     * @throws StockServiceException If data about the stock can't be retrieved. This is a
+     *                               fatal error.
+     */
+    public String displayStockQuotesInterval(StockQuery stockQuery, IntervalEnums interval) throws StockServiceException {
+        StringBuilder stringBuilder = new StringBuilder();
+
+        List<StockQuote> stockQuotes =
+                stockService.getQuote(stockQuery.getSymbol(), stockQuery.getFrom(), stockQuery.getUntil(), interval);
+
+        stringBuilder.append("Stock quotes for: " + stockQuery.getSymbol() + "\n");
+        for (StockQuote stockQuote : stockQuotes) {
+            stringBuilder.append(stockQuote.toString());
+        }
+		
+		return stringBuilder.toString();
+    }
+	
     /**
      * Terminate the application.
      *
@@ -109,7 +137,7 @@ public class BasicStockQuoteApplication {
     /**
      * Run the StockTicker application.
      * <p/>
-     * When invoking the program supply one ore more stock symbols.
+     * When invoking the program supply one or more stock symbols.
      *
      * @param args one or more stock symbols
      */
@@ -123,13 +151,12 @@ public class BasicStockQuoteApplication {
                     "Please supply 3 arguments a stock symbol, a start date (MM/DD/YYYY) and end date (MM/DD/YYYY)");
         }
         try {
-
             StockQuery stockQuery = new StockQuery(args[0], args[1], args[2]);
             StockService stockService = StockServiceFactory.getInstance();
             BasicStockQuoteApplication basicStockQuoteApplication =
                     new BasicStockQuoteApplication(stockService);
-            basicStockQuoteApplication.displayStockQuotes(stockQuery);
-
+            String quoteDisplay = basicStockQuoteApplication.displayStockQuotes(stockQuery);
+            System.out.println(quoteDisplay);
         } catch (ParseException e) {
             exitStatus = ProgramTerminationStatusEnum.ABNORMAL;
             programTerminationMessage = "Invalid date data: " + e.getMessage();
@@ -137,7 +164,23 @@ public class BasicStockQuoteApplication {
             exitStatus = ProgramTerminationStatusEnum.ABNORMAL;
             programTerminationMessage = "StockService failed: " + e.getMessage();
         }
-
+		
+		 try {
+            StockQuery stockQuery = new StockQuery(args[0], args[1], args[2]);
+            StockService stockService = StockServiceFactory.getInstance();
+            BasicStockQuoteApplication basicStockQuoteApplication =
+                    new BasicStockQuoteApplication(stockService);
+			IntervalEnums interval = IntervalEnums.HOURLY;		
+            String quoteDisplay = basicStockQuoteApplication.displayStockQuotesInterval(stockQuery, interval);
+            System.out.println(quoteDisplay);
+        } catch (ParseException e) {
+            exitStatus = ProgramTerminationStatusEnum.ABNORMAL;
+            programTerminationMessage = "Invalid date data: " + e.getMessage();
+        } catch (StockServiceException e) {
+            exitStatus = ProgramTerminationStatusEnum.ABNORMAL;
+            programTerminationMessage = "StockService failed: " + e.getMessage();
+        }
+			
         exit(exitStatus, programTerminationMessage);
         System.out.println("Oops could not parse a date");
     }

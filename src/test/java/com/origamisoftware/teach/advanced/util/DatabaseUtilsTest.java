@@ -1,5 +1,6 @@
 package com.origamisoftware.teach.advanced.util;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.sql.Connection;
@@ -12,7 +13,7 @@ import static org.junit.Assert.assertTrue;
  *  Tests for the DatabaseUtils class
  */
 public class DatabaseUtilsTest {
-
+	
     @Test
     public void testGetConnection() throws Exception{
         Connection connection = DatabaseUtils.getConnection();
@@ -26,4 +27,10 @@ public class DatabaseUtilsTest {
         boolean execute = statement.execute("select * from quotes");
         assertTrue("verify that we can execute a statement",execute);
     }
+	
+	@Test(expected = DatabaseInitializationException.class)
+	public void testInitializeDatabase() throws Exception{
+	
+		DatabaseUtils.initializeDatabase("C:/Users/lmrjr/Adv_Java_Class_Week5/src/main/sql/stocks_db_initialization");
+	}		
 }
