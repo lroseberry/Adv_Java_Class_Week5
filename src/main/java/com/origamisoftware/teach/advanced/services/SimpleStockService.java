@@ -1,6 +1,7 @@
 package com.origamisoftware.teach.advanced.services;
 
 import com.origamisoftware.teach.advanced.model.StockQuote;
+import com.origamisoftware.teach.advanced.util.IntervalEnums;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -52,4 +53,8 @@ public class SimpleStockService implements StockService {
         }
         return stockQuotes;
     }
+	@Override 
+	public List<StockQuote> getQuote(String symbol, Calendar startDate, Calendar endDate, IntervalEnums interval) {
+		return null;
+	}
 }

@@ -3,7 +3,9 @@ package com.origamisoftware.teach.advanced.apps.stockquote;
 import com.origamisoftware.teach.advanced.model.StockQuery;
 import com.origamisoftware.teach.advanced.model.StockQuote;
 import com.origamisoftware.teach.advanced.services.StockService;
+import com.origamisoftware.teach.advanced.services.StockServiceFactory;
 import com.origamisoftware.teach.advanced.services.StockServiceException;
+import com.origamisoftware.teach.advanced.util.IntervalEnums;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -41,9 +43,9 @@ public class BasicStockQuoteApplicationTest {
     @Test
     public void testDisplayResults() throws ParseException, StockServiceException {
         basicStockQuoteApplication = new BasicStockQuoteApplication(stockServiceMock);
-        String symbol = "APPL";
-        String from = "2011/10/29";
-        String until = "2011/11/29";
+        String symbol = "GOOG";
+        String from = "2018/02/01";
+        String until = "2020/02/01";
         StockQuery stockQuery = new StockQuery(symbol, from, until);
 
         List<StockQuote> stockQuotes = new ArrayList<>();
@@ -64,5 +66,22 @@ public class BasicStockQuoteApplicationTest {
     @Test(expected = NullPointerException.class)
     public void testMainNegative() {
         BasicStockQuoteApplication.main(null);
+    }
+	
+	@Test
+    public void testDisplayResultsInterval() throws ParseException, StockServiceException {
+		StockService stockService = StockServiceFactory.getInstance();
+        basicStockQuoteApplication = new BasicStockQuoteApplication(stockService); 
+		String symbol = "GOOG";
+        String from = "2018/02/01";
+        String until = "2020/02/01";
+		IntervalEnums interval = IntervalEnums.HOURLY;
+        StockQuery stockQuery = new StockQuery(symbol, from, until);
+
+        String output = basicStockQuoteApplication.displayStockQuotesInterval(stockQuery, interval);
+        assertTrue("make sure symbol appears in output", output.contains(symbol));
+        assertTrue("make sure from date appears in output", output.contains(from));
+        assertTrue("make sure until date in output", output.contains(until));
+
     }
 }

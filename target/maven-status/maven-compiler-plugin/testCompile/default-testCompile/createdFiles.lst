@@ -1,0 +1,6 @@
+com\origamisoftware\teach\advanced\model\StockQuoteTest.class
+com\origamisoftware\teach\advanced\model\StockQueryTest.class
+com\origamisoftware\teach\advanced\apps\stockquote\BasicStockQuoteApplicationTest.class
+com\origamisoftware\teach\advanced\util\DatabaseUtilsTest.class
+com\origamisoftware\teach\advanced\services\StockServiceFactoryTest.class
+com\origamisoftware\teach\advanced\services\DatabaseStockServiceTest.class

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.origamisoftware.teach.advanced.services.StockServiceFactoryTest" time="0.008" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\lmrjr\.m2\repository\org\apache\maven\surefire\surefire-booter\2.22.1\surefire-booter-2.22.1.jar;C:\Users\lmrjr\.m2\repository\org\apache\maven\surefire\surefire-api\2.22.1\surefire-api-2.22.1.jar;C:\Users\lmrjr\.m2\repository\org\apache\maven\surefire\surefire-logger-api\2.22.1\surefire-logger-api-2.22.1.jar;c:\Users\lmrjr\Adv_Java_Class_Week5\target\test-classes;c:\Users\lmrjr\Adv_Java_Class_Week5\target\classes;C:\Users\lmrjr\.m2\repository\junit\junit\4.10\junit-4.10.jar;C:\Users\lmrjr\.m2\repository\org\hamcrest\hamcrest-core\1.1\hamcrest-core-1.1.jar;C:\Users\lmrjr\.m2\repository\mysql\mysql-connector-java\5.1.44\mysql-connector-java-5.1.44.jar;C:\Users\lmrjr\.m2\repository\javax\validation\validation-api\1.0.0.GA\validation-api-1.0.0.GA.jar;C:\Users\lmrjr\.m2\repository\org\mockito\mockito-all\1.9.5\mockito-all-1.9.5.jar;C:\Users\lmrjr\.m2\repository\org\apache\httpcomponents\httpcore\4.4\httpcore-4.4.jar;C:\Users\lmrjr\.m2\repository\org\apache\ibatis\ibatis-sqlmap\2.3.4.726\ibatis-sqlmap-2.3.4.726.jar;C:\Users\lmrjr\.m2\repository\org\apache\commons\commons-lang3\3.8.1\commons-lang3-3.8.1.jar;C:\Users\lmrjr\.m2\repository\org\apache\maven\surefire\surefire-junit4\2.22.1\surefire-junit4-2.22.1.jar"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="America/New_York"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_171\jre\bin"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\lmrjr\AppData\Local\Temp\surefire7452373039014228626 2019-03-02T09-48-13_318-jvmRun1 surefire2643209852605115504tmp surefire_0488635068094937136tmp"/>
+    <property name="surefire.test.class.path" value="c:\Users\lmrjr\Adv_Java_Class_Week5\target\test-classes;c:\Users\lmrjr\Adv_Java_Class_Week5\target\classes;C:\Users\lmrjr\.m2\repository\junit\junit\4.10\junit-4.10.jar;C:\Users\lmrjr\.m2\repository\org\hamcrest\hamcrest-core\1.1\hamcrest-core-1.1.jar;C:\Users\lmrjr\.m2\repository\mysql\mysql-connector-java\5.1.44\mysql-connector-java-5.1.44.jar;C:\Users\lmrjr\.m2\repository\javax\validation\validation-api\1.0.0.GA\validation-api-1.0.0.GA.jar;C:\Users\lmrjr\.m2\repository\org\mockito\mockito-all\1.9.5\mockito-all-1.9.5.jar;C:\Users\lmrjr\.m2\repository\org\apache\httpcomponents\httpcore\4.4\httpcore-4.4.jar;C:\Users\lmrjr\.m2\repository\org\apache\ibatis\ibatis-sqlmap\2.3.4.726\ibatis-sqlmap-2.3.4.726.jar;C:\Users\lmrjr\.m2\repository\org\apache\commons\commons-lang3\3.8.1\commons-lang3-3.8.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\lmrjr"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_171\jre"/>
+    <property name="basedir" value="c:\Users\lmrjr\Adv_Java_Class_Week5"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_171\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_171\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_171-b11"/>
+    <property name="user.name" value="lmrjr"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_171\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\lmrjr\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\lmrjr\AppData\Local\Temp\"/>
+    <property name="java.version" value="1.8.0_171"/>
+    <property name="user.dir" value="c:\Users\lmrjr\Adv_Java_Class_Week5"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_171\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Java\jdk1.8.0_171\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program FIles\apache-maven-3.6.0\bin;C:\Program Files\Git\cmd;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Users\lmrjr\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.3\bin;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.171-b11"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_171\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="testGetInstance" classname="com.origamisoftware.teach.advanced.services.StockServiceFactoryTest" time="0"/>
+</testsuite>

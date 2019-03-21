@@ -1,8 +1,10 @@
 package com.origamisoftware.teach.advanced.services;
 
 import com.origamisoftware.teach.advanced.model.StockQuote;
+import com.origamisoftware.teach.advanced.util.IntervalEnums;
 
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -36,5 +38,15 @@ public interface StockService {
      */
     List<StockQuote> getQuote(String symbol, Calendar from, Calendar until) throws StockServiceException;
 
+    /**
+     * Get a historical list of stock quotes for the provided symbol
+     * @param symbol the stock symbol to search for
+     * @param from the date of the first stock quote
+     * @param until the date of the last stock quote
+     * @param interval the number of StockQuotes to get e.g. if interval.DAILY
+     * was specified one StockQuote per day will be returned
+     * @return a list of StockQuote instances.
+     */
+	 List<StockQuote> getQuote(String symbol, Calendar from, Calendar until, IntervalEnums interval) throws StockServiceException;
 }
 
